@@ -1,0 +1,16 @@
+div {
+    /*Vh stands for viewport height meaning it will be relevant to the height of the browser window. */
+    height: 100vh;
+    background-image: url(resources/img/PR_Christmas_Lookbook_15.jpg);
+    /*Our background image covers full width and height of section withour skewing or repeating the image. */
+   	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* We  fix the background to the browser viewport rather than to the section, creating a reveal effect as we scroll.*/
+	background-attachment: fixed;
+    background-repeat: no-repeat;
+/*    background-attachment:scroll;*/
+}
+
+
