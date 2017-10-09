@@ -1,2 +1,1 @@
-# pressrelease
-Wonderbly press release
+# Wonderbly lookbook
