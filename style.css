@@ -73,26 +73,34 @@ input, textarea, select {
 }
 
 
-/* IMPORT THE WONDERBLY FONT*/
-/*
 @font-face {
-    src: url(font/WonderblyBoing-Light.otf) format(otf);
+font-family: 'WonderblyBoing';
+src: url(resources/font/WonderblyBoing-Light.otf);
+font-weight: 200;
+font-style: normal;
 }
-*/
 
-/*
-body {
-  font-family: 'WonderblyBoing-Light';
-  font-size: 16px;
+@font-face {
+font-family: 'WonderblyBoing';
+src: url(resources/font/WonderblyBoing-Regular.otf);
+font-weight: 400;
+font-style: normal;
 }
-*/
 
-p {
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    position: relative;
-    /* Optional padding, added to center the paragraphs*/
+@font-face {
+font-family: 'WonderblyBoing';
+src: url(resources/font/WonderblyBoing-Medium.otf);
+font-weight: 500;
+font-style: normal;
 }
+
+@font-face {
+font-family: 'WonderblyBoing';
+src: url(resources/font/WonderblyBoing-Semibold.otf);
+font-weight: 600;
+font-style: normal;
+}
+
 
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS*/
@@ -128,10 +136,49 @@ section {
 
 /* ALL PAGES */
 
-.pricing {
+.heading-product,
+.heading-product--small,
+.heading-age,
+.pricing,
+p {
+    font-family: 'WonderblyBoing';
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    position: relative;
+    /* Optional padding, added to center the paragraphs*/
 }
 
+.heading-product {
+    font-weight: 500;
+    font-size: 17px;
+}
 
+.pricing,
+.heading-product--small {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.heading-product--small {
+    margin: 3px 0;
+}
+
+.heading-age {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 2px 0;
+}
+
+.white-copy {
+    color: #fff;
+}
+
+.red-copy {
+    color: #F6707B;
+}
 /* RELEVANT PAGES: ALL PRODUCT PAGES */
 
 .separator {
@@ -141,22 +188,6 @@ section {
     background-color: #fff;
     margin: 5px 0;
 }
-
-.heading-product {
-    margin-top: 0px;
-    margin-bottom: 3px;
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-
-.heading-age {
-    font-size: 15px; 
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.product-body--right {}
-
 
 /* RELEVANT PAGES: ALL PRODUCT PAGES & INTRO/LAST PAGE */
 
@@ -189,9 +220,12 @@ section {
 }
 
 /*As opposed to the product-page_description class, this one refers to the paragrpah only*/
-.product-body--right {}
+.product-body--right {
+    margin: 10px 0 5px 0;
+}
 
-.child-image---left {}
+.child-image---left {
+}
 
 /* RELEVANT PAGES: SNOWFLAKE */
 
@@ -199,7 +233,9 @@ section {
 
 .child-image---right {}
 
-.product-body--left {}
+.product-body--left {
+     margin: 10px 0 5px 0;
+}
 
 
 /* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES */
@@ -265,7 +301,7 @@ section {
 /* ----------------------------------------------- */
 
 .section-lmn {
-    background-image: url(resources/css/background_img/lmn-background.png);
+    background-image: url(resources/pages/lmn/lmn-girl-all.jpg);
 }
 
 /* What should the image size be? Added dimensions so that the description would fit onto the page. Can we disucss positioning in the mobile-first apporach? */
@@ -340,9 +376,9 @@ section {
 /* SNOWFLAKE PAGE */
 /* ----------------------------------------------- */
 
-/*This background image is mobile size, though - smaller than others*/
+/*Oct 18: changed the background image from the solid colour background image (CSS) + the image of the littles-mobile (HTML) to one large background images of the littles. (CSS) */
 .section-snowflake {
-    background-image: url(resources/css/background_img/snowflake-background.png);
+    background-image: url(resources/pages/snowflake/snowflake-littles-all.png);
 }
 
 
@@ -352,7 +388,7 @@ section {
 
 /*This background image is mobile size, though - smaller than others*/
 .section-snowflake-personalisation {
-    background-image: url(resources/css/background_img/snowflake-background.png);
+    background-image: url(resources/css/background_img/snowflake-background-use.png);
 }
 
 /* ----------------------------------------------- */
@@ -361,7 +397,7 @@ section {
 
 /*Inserted a mobile version, so this background image probably isn't necessary?*/
 .section-mgt {
-    background-image: url(resources/css/background_img/mgt-personalised-background.png);
+    background-image: url(resources/pages/mgt/mgt-girl-all.jpg);
 }
 
 
