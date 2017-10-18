@@ -98,11 +98,20 @@ p {
 /* REUSABLE COMPONENTS*/
 /* ----------------------------------------------- */
 
+.row { 
+    padding: 0 10px; 
+}
+
+.col { 
+    width: 100%;
+    margin: 0 0 10px 0;
+    }
+    
 
 /* THE PARALLAX EFFECT: no longer working! */
 section {
     /*Vh stands for viewport height meaning it will be relevant to the height of the browser window. */
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url(resources/css/background_img/front-background.png);
 	/*Our background image covers full width and height of section withour skewing or repeating the image. */
 	background-size: auto 100vh;
@@ -114,6 +123,7 @@ section {
 	background-repeat: no-repeat;
 	/*    background-attachment:scroll;*/
 	background-position: center top;
+    padding: 25px 0;
 }
 
 /* ALL PAGES */
