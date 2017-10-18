@@ -162,14 +162,23 @@ p {
     font-weight: 500;
 }
 
+.pricing,
 .heading-product--small {
+    font-size: 16px;
+}
+
+.heading-product--small {
+    margin: 3px 0;
+}
+
+.pricing {
     margin: 3px 0;
 }
 
 .heading-age {
     font-weight: 400;
     font-size: 15px;
-    margin: 2px 0;
+    margin: 4px 0;
 }
 
 .white-copy {
@@ -195,57 +204,37 @@ p {
 .product-page__title,
 .intro-last-page_img-title--left {
     margin: 10px 2px;
+    /*  The below padding might be the issue on the j-homepage = copy overlapping with the girl */
+    padding-bottom: 5px;
     text-align: center;
 }
 
-.pricing {
-    
-}
-
-/* RELEVANT PAGES: ALL PAGES BUT THE SNOWFLAKE */
+/* RELEVANT PAGES: ALL PAGES BUT BT & SNOWFLAKE */
 
 /* The div section that holds all the copy on the product page. Problem: the right side of text is not visible and the bottom part of the text is extending into the next page - how to fit the text onto this page? */
 .product-page_description--right {
-/*
-    line-height: 1;
-    letter-spacing: 1px;
-*/
-/*    position: relative;*/
-/*    text-align: right;*/
-    /* Optional padding, added to center the paragraphs*/
-/*
-    padding-top: 0px;
-    margin: 20px 20px;
-*/
+    margin: 10px 0;
 }
 
-/*As opposed to the product-page_description class, this one refers to the paragrpah only*/
+.product-body--left,
 .product-body--right {
-    margin: 10px 0 5px 0;
+    margin: 20px 0 10px 0;
+/*    margin: 10px 0 5px 0;*/
 }
 
 .child-image---left {
 }
 
-/* RELEVANT PAGES: SNOWFLAKE */
+/* RELEVANT PAGES: BT & SNOWFLAKE (THE COPY IS ON THE LEFT) */
 
-.product-page_description--left {}
+.product-page_description--left {
+    margin: 10px 0;
+}
 
 .child-image---right {}
 
-.product-body--left {
-     margin: 10px 0 5px 0;
-}
 
-
-/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES */
-
-.heading-product--small {
-    
-}
-
-
-/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES BUT THE LOST MY NAME ONE */
+/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES BUT THE LOST MY NAME ONE (THE LATTER IS SPECIFIED IN ITS OWN SECTION BELOW) */
 
 .product__personalisation-image--horizontal-left {}
 
@@ -256,16 +245,13 @@ p {
 .product__personalisation-image--horizontal-right {}
 
 
-/* RELEVANT PAGES: THE LOST MY NAME 'PERSONALISATION' PAGE */
+/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES */
 
-.product__personalisation-image--vertical-left{}
-
-.product__personalisation-copy--vertical-left {}
-
-.product__personalisation-copy--vertical-right {}
-
-.product__personalisation-image--vertical-right {}
-
+.product-body--right,
+.product-body--left {
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* ----------------------------------------------- */
 /* FRONT COVER PAGE*/
@@ -296,21 +282,15 @@ p {
     margin: 40px 20px;
 }
 
+
 /* ----------------------------------------------- */
 /* LMN PAGE*/
 /* ----------------------------------------------- */
 
 .section-lmn {
-    background-image: url(resources/pages/lmn/lmn-girl-all.jpg);
+/*    background-image: url(resources/pages/lmn/lmn-girl-all.jpg);*/
 }
 
-/* What should the image size be? Added dimensions so that the description would fit onto the page. Can we disucss positioning in the mobile-first apporach? */
-.child-image---left {
-/*
-    width: 300px;
-    height: 402px;
-*/
-}
 
 /* ----------------------------------------------- */
 /* LMN PERSONALISATION PAGE */
@@ -320,14 +300,34 @@ p {
     background-image: url(resources/css/background_img/lmn-personalised-background.png);
 }
 
+.product__personalisation-image--vertical-right {
+    margin: 0 55px 20px;
+}
+
+.product__personalisation-image--vertical-left {
+    margin: 0 -70px -20px;
+}
+
+.product__personalisation-copy--vertical-left {
+    margin-top: -25px;
+    /*    Added this padding to take away the 10px padding and therefore put the vertical copy in line with the horizontal copy (on all other product pages) - not in effect, it gets overriden by row padding of 10px*/
+/*    padding: 0 -10px;*/
+}
+    
+.product__personalisation-copy--vertical-right {
+    margin-top: -25px;
+    /*    Added this padding to take away the 10px padding and therefore put the vertical copy in line with the horizontal copy (on all other product pages) - not in effect, it gets overriden by row padding of 10px*/
+/*    padding: 0 -10px;*/
+}
 
 /* ----------------------------------------------- */
 /* JHOME PAGE */
 /* ----------------------------------------------- */
 
 .section-jhome {
-    background-image: url(resources/css/background_img/jhome-background.png);
+/*    background-image: url(resources/pages/jhome/jhome-girl-all.png);*/
 }
+
 
 /* ----------------------------------------------- */
 /* JHOME PERSONALISATION */
@@ -337,12 +337,20 @@ p {
     background-image: url(resources/css/background_img/jhome-personalised-background.png);
 }
 
+.product__personalisation-copy--horizontal-left {
+    margin: 20px 0 30px 0;
+}
+
+.product__personalisation-copy--horizontal-right {
+    margin: 20px 0 50px 0;
+}
+
 /* ----------------------------------------------- */
 /* BT PAGE */
 /* ----------------------------------------------- */
 
 .section-bt {
-    background-image: url(resources/css/background_img/bt-background.png);
+/*    background-image: url(resources/pages/bt/bt-boy-all.png);*/
 }
 
 
@@ -351,8 +359,18 @@ p {
 /* ----------------------------------------------- */
 
 .section-bt-personalisation {
-    background-image: url(resources/css/background_img/bt-background.png);
+/*    background-image: url(resources/css/background_img/bt-background.png);*/
 }
+
+.product__personalisation-copy--horizontal-left--small-margin,
+.product__personalisation-copy--horizontal-right--small-margin {
+    margin: -30px 0;
+}
+
+.product__personalisation-copy--horizontal-left--small-margin {
+    margin-bottom: 15px;
+}
+
 
 /* ----------------------------------------------- */
 /* KOY PAGE */
@@ -360,7 +378,11 @@ p {
 
 /*This background image is mobile size, though - smaller than others*/
 .section-koy {
-    background-image: url(resources/css/background_img/koy-background.jpg);
+    background-image: url(resources/pages/koy/koy-girl-all.jpg);
+}
+
+.purple-copy {
+    color: #645B9B;
 }
 
 
@@ -371,6 +393,7 @@ p {
 .section-koy-personalisation {
     background-image: url(resources/css/background_img/koy-personalised-background.png);
 }
+
 
 /* ----------------------------------------------- */
 /* SNOWFLAKE PAGE */
@@ -388,8 +411,13 @@ p {
 
 /*This background image is mobile size, though - smaller than others*/
 .section-snowflake-personalisation {
-    background-image: url(resources/css/background_img/snowflake-background-use.png);
+    background-image: url(resources/css/background_img/snowflake-background.png);
 }
+
+.product-page_description--left--bottom {
+    margin: 220px 0 20px 0;
+}
+
 
 /* ----------------------------------------------- */
 /* MGT PAGE */
@@ -397,7 +425,15 @@ p {
 
 /*Inserted a mobile version, so this background image probably isn't necessary?*/
 .section-mgt {
-    background-image: url(resources/pages/mgt/mgt-girl-all.jpg);
+/*    background-image: url(resources/pages/mgt/mgt-girl-all.jpg);*/
+}
+
+.product-page_description--right--bottom {
+    margin: 150px 0 20px 0;
+}
+
+.purple-copy {
+    color: 645B9B;
 }
 
 
@@ -409,14 +445,18 @@ p {
     background-image: url(resources/css/background_img/mgt-personalised-background.png);
 }
 
+
 /* ----------------------------------------------- */
 /* LB PAGE */
 /* ----------------------------------------------- */
 /*Inserted a mobile version, so this background image probably isn't necessary?*/
 .section-lb {
-    background-image: url(resources/css/background_img/lb-personalised-background.png);
+    background-image: url(resources/pages/lb/lb-baby-all.jpg);
 }
 
+.purple-copy {
+    color: 645B9B;
+}
 
 /* ----------------------------------------------- */
 /* LB PERSONALISATION */
@@ -425,6 +465,7 @@ p {
 .section-lb-personalisation {
     background-image: url(resources/css/background_img/lb-personalised-background.png);
 }
+
 
 /* ----------------------------------------------- */
 /* LAST PAGE */
@@ -450,9 +491,10 @@ p at the centre, bottom of the page
 
 /*Dont use / in front of resources! or the path wont be found*/
 
+/*
 .image_2 {
 	background-image: url(resources/img/PR_Christmas_Lookbook_153.jpg);
 }
 .image_3 {
 	background-image: url(resources/img/PR_Christmas_Lookbook_154.jpg);
-}
+}*/
