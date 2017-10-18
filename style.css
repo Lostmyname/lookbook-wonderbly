@@ -1,21 +1,412 @@
-div {
-    /*Vh stands for viewport height meaning it will be relevant to the height of the browser window. */
-    height: 100vh;
-    background-image: url(resources/img/PR_Christmas_Lookbook_15.jpg);
-    /*Our background image covers full width and height of section withour skewing or repeating the image. */
-   	background-size: auto 100vh;
-/*    -webkit-background-size: auto 100vh;*/
-/*    -moz-background-size: auto 100vh;*/
-/*    -o-background-size: auto 100vh;*/
-/*     We  fix the background to the browser viewport rather than to the section, creating a reveal effect as we scroll.*/
-	background-attachment: fixed;
-    background-repeat: no-repeat;
-/*    background-attachment:scroll;*/
-    background-position: center top;
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* IMPORT THE WONDERBLY FONT*/
 /*
-Before we had:
-   	background-size: cover;
-   	background-size: auto 100vh;
+@font-face {
+    src: url(font/WonderblyBoing-Light.otf) format(otf);
+}
 */
+
+/*
+body {
+  font-family: 'WonderblyBoing-Light';
+  font-size: 16px;
+}
+*/
+
+p {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    /* Optional padding, added to center the paragraphs*/
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS*/
+/* ----------------------------------------------- */
+
+
+/* THE PARALLAX EFFECT: no longer working! */
+section {
+    /*Vh stands for viewport height meaning it will be relevant to the height of the browser window. */
+	height: 100vh;
+	background-image: url(resources/css/background_img/front-background.png);
+	/*Our background image covers full width and height of section withour skewing or repeating the image. */
+	background-size: auto 100vh;
+	/*    -webkit-background-size: auto 100vh;*/
+	/*    -moz-background-size: auto 100vh;*/
+	/*    -o-background-size: auto 100vh;*/
+	/*     We  fix the background to the browser viewport rather than to the section, creating a reveal effect as we scroll.*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	/*    background-attachment:scroll;*/
+	background-position: center top;
+}
+
+/* ALL PAGES */
+
+.pricing {
+}
+
+
+/* RELEVANT PAGES: ALL PRODUCT PAGES */
+
+.separator {
+    display: block;
+    width: 77px;
+    height: 1px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.heading-product {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.heading-age {
+    font-size: 15px; 
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.product-body--right {}
+
+
+/* RELEVANT PAGES: ALL PRODUCT PAGES & INTRO/LAST PAGE */
+
+/*The below is overwritten, no padding appears*/
+.product-page__title,
+.intro-last-page_img-title--left {
+    margin: 10px 2px;
+    text-align: center;
+}
+
+.pricing {
+    
+}
+
+/* RELEVANT PAGES: ALL PAGES BUT THE SNOWFLAKE */
+
+/* The div section that holds all the copy on the product page. Problem: the right side of text is not visible and the bottom part of the text is extending into the next page - how to fit the text onto this page? */
+.product-page_description--right {
+/*
+    line-height: 1;
+    letter-spacing: 1px;
+*/
+/*    position: relative;*/
+/*    text-align: right;*/
+    /* Optional padding, added to center the paragraphs*/
+/*
+    padding-top: 0px;
+    margin: 20px 20px;
+*/
+}
+
+/*As opposed to the product-page_description class, this one refers to the paragrpah only*/
+.product-body--right {}
+
+.child-image---left {}
+
+/* RELEVANT PAGES: SNOWFLAKE */
+
+.product-page_description--left {}
+
+.child-image---right {}
+
+.product-body--left {}
+
+
+/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES */
+
+.heading-product--small {
+    
+}
+
+
+/* RELEVANT PAGES: ALL 'PERSONALISATION' PAGES BUT THE LOST MY NAME ONE */
+
+.product__personalisation-image--horizontal-left {}
+
+.product__personalisation-copy--horizontal-right {}
+
+.product__personalisation-copy--horizontal-left {}
+
+.product__personalisation-image--horizontal-right {}
+
+
+/* RELEVANT PAGES: THE LOST MY NAME 'PERSONALISATION' PAGE */
+
+.product__personalisation-image--vertical-left{}
+
+.product__personalisation-copy--vertical-left {}
+
+.product__personalisation-copy--vertical-right {}
+
+.product__personalisation-image--vertical-right {}
+
+
+/* ----------------------------------------------- */
+/* FRONT COVER PAGE*/
+/* ----------------------------------------------- */
+
+.section-front {
+    background-image: url(resources/css/background_img/front-background.png);
+}
+
+/* ----------------------------------------------- */
+/* INTRO PAGE*/
+/* ----------------------------------------------- */
+
+.section-intro {
+    background-image: url(resources/css/background_img/intro-background.png);
+}
+
+.intro-last-page_p--long {
+    line-height: 1.2;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: center;
+    /* Optional padding, added to center the paragraphs*/
+    padding-top: 20px;
+}
+
+.p--spacing {
+    margin: 40px 20px;
+}
+
+/* ----------------------------------------------- */
+/* LMN PAGE*/
+/* ----------------------------------------------- */
+
+.section-lmn {
+    background-image: url(resources/css/background_img/lmn-background.png);
+}
+
+/* What should the image size be? Added dimensions so that the description would fit onto the page. Can we disucss positioning in the mobile-first apporach? */
+.child-image---left {
+/*
+    width: 300px;
+    height: 402px;
+*/
+}
+
+/* ----------------------------------------------- */
+/* LMN PERSONALISATION PAGE */
+/* ----------------------------------------------- */
+
+.section-lmn-personalisation {
+    background-image: url(resources/css/background_img/lmn-personalised-background.png);
+}
+
+
+/* ----------------------------------------------- */
+/* JHOME PAGE */
+/* ----------------------------------------------- */
+
+.section-jhome {
+    background-image: url(resources/css/background_img/jhome-background.png);
+}
+
+/* ----------------------------------------------- */
+/* JHOME PERSONALISATION */
+/* ----------------------------------------------- */
+
+.section-jhome-personalisation {
+    background-image: url(resources/css/background_img/jhome-personalised-background.png);
+}
+
+/* ----------------------------------------------- */
+/* BT PAGE */
+/* ----------------------------------------------- */
+
+.section-bt {
+    background-image: url(resources/css/background_img/bt-background.png);
+}
+
+
+/* ----------------------------------------------- */
+/* BT PERSONALISATION */
+/* ----------------------------------------------- */
+
+.section-bt-personalisation {
+    background-image: url(resources/css/background_img/bt-background.png);
+}
+
+/* ----------------------------------------------- */
+/* KOY PAGE */
+/* ----------------------------------------------- */
+
+/*This background image is mobile size, though - smaller than others*/
+.section-koy {
+    background-image: url(resources/css/background_img/koy-background.jpg);
+}
+
+
+/* ----------------------------------------------- */
+/* KOY PERSONALISATION */
+/* ----------------------------------------------- */
+
+.section-koy-personalisation {
+    background-image: url(resources/css/background_img/koy-personalised-background.png);
+}
+
+/* ----------------------------------------------- */
+/* SNOWFLAKE PAGE */
+/* ----------------------------------------------- */
+
+/*This background image is mobile size, though - smaller than others*/
+.section-snowflake {
+    background-image: url(resources/css/background_img/snowflake-background.png);
+}
+
+
+/* ----------------------------------------------- */
+/* SNOWFLAKE PERSONALISATION */
+/* ----------------------------------------------- */
+
+/*This background image is mobile size, though - smaller than others*/
+.section-snowflake-personalisation {
+    background-image: url(resources/css/background_img/snowflake-background.png);
+}
+
+/* ----------------------------------------------- */
+/* MGT PAGE */
+/* ----------------------------------------------- */
+
+/*Inserted a mobile version, so this background image probably isn't necessary?*/
+.section-mgt {
+    background-image: url(resources/css/background_img/mgt-personalised-background.png);
+}
+
+
+/* ----------------------------------------------- */
+/* MGT PERSONALISATION */
+/* ----------------------------------------------- */
+
+.section-mgt-personalisation {
+    background-image: url(resources/css/background_img/mgt-personalised-background.png);
+}
+
+/* ----------------------------------------------- */
+/* LB PAGE */
+/* ----------------------------------------------- */
+/*Inserted a mobile version, so this background image probably isn't necessary?*/
+.section-lb {
+    background-image: url(resources/css/background_img/lb-personalised-background.png);
+}
+
+
+/* ----------------------------------------------- */
+/* LB PERSONALISATION */
+/* ----------------------------------------------- */
+
+.section-lb-personalisation {
+    background-image: url(resources/css/background_img/lb-personalised-background.png);
+}
+
+/* ----------------------------------------------- */
+/* LAST PAGE */
+/* ----------------------------------------------- */
+
+.section-last {
+    background-image: url(resources/css/background_img/last-page-background.png);
+}
+
+
+/*
+p at the centre, bottom of the page
+.p__cover--centre {
+	    margin-top: 0;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+*/
+
+
+/*Dont use / in front of resources! or the path wont be found*/
+
+.image_2 {
+	background-image: url(resources/img/PR_Christmas_Lookbook_153.jpg);
+}
+.image_3 {
+	background-image: url(resources/img/PR_Christmas_Lookbook_154.jpg);
+}
